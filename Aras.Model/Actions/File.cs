@@ -52,20 +52,7 @@ namespace Aras.Model.Actions
 
                             if (this.Result.ConfigID.Equals(this.Item.ConfigID))
                             {
-                                if (!this.Result.ID.Equals(this.Item.ID))
-                                {
-                                    // New Version of Item
-                                    //Model.Item newversion = this.Item.Session.Store(this.Item.ItemType).Get(this.Result);
-                                    //Model.Item oldversion = this.Item;
-                                    //this.Item = newversion;
-                                    //this.UpdateItem(this.Result);
-                                    //oldversion.OnSuperceded(newversion);
-                                }
-                                else
-                                {
-                                    this.UpdateItem(this.Result);
-                                }
-
+                                this.UpdateItem(this.Result);
                                 this.Item.UpdateProperties(this.Result);
                             }
                             else
